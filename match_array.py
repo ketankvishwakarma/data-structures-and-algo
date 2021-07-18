@@ -1,10 +1,10 @@
 """
-Question: Given two arrays determine wheather 2nd array is squared of first array. i.e.
+Question: Given two arrays determine whether 2nd array is squared of the first array. i.e.
 
 arr_1 = [1,2,3,4] 
 arr_2 = [1,4,9,16]
 
-arr_2 has all the elements of arr_1 and they are also squared in value. Also note order does not matter.
+arr_2 has all the elements of arr_1 and they are also squared in value. Also, note order does not matter.
 """
 
 

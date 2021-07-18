@@ -1,5 +1,5 @@
 """
-Write a program to count the number of occurances of each characters in the given text.
+Write a program to count the number of occurrences of each character in the given text.
 You can skip special characters like space, !, ? etc
 """
 
@@ -22,7 +22,7 @@ class CharCount:
         return char_count_map
 
 
-x = CharCount("Hello Sweety! This is test string and this is awesome haahhahhaaha")
+x = CharCount("Hello Sweety! This is test string")
 print(x.compute_char_count())
 
 
