@@ -1,1 +1,1 @@
-# data-structures-and-algo 101
+# data-structures-and-algo
