@@ -1,3 +1,8 @@
+"""
+Write a program to count the number of occurances of each characters in the given text.
+You can skip special characters like space, !, ? etc
+"""
+
 class CharCount:
     skip_list = ['!',' ','?','.','1','2','3','4','5','6','7','8','9','0']
     def __init__(self,char_string):
