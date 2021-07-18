@@ -1,5 +1,5 @@
 """
-Check if two string are valid anagrams.
+Check if two strings are valid anagrams.
 
 NOTE: All inputs will be in lower cases
 
