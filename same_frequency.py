@@ -2,9 +2,9 @@
 Given two integers, find out if the two numbers have same frequency of digits
 
 182,281          -> True
-34,14            -> True
-22,222           -> True
-3589579,5879385  -> True
+34,14            -> False
+22,222           -> False
+3589578,5879385  -> True
 """
 
 def same_frequency(first,second):
@@ -20,7 +20,7 @@ def same_frequency(first,second):
             first_str_dict.update({value:(first_str_dict.get(value)+1)})
         else:
             first_str_dict.update({value:1})
-    
+
     second_str_dict = {}
     for index, value in enumerate(second_str):
         if value in second_str_dict.keys():
@@ -38,7 +38,7 @@ def same_frequency(first,second):
 
 
 if __name__ =="__main__":
-    print("82,281 ({})".format(same_frequency(182,281)))
+    print("182,281 ({})".format(same_frequency(182,281)))
     print("34,14 -> ({})".format(same_frequency(34,14)))
     print("22,222 -> ({})".format(same_frequency(22,222)))
-    print("589579,5879385 -> ({})".format(same_frequency(3589579,5879385)))
+    print("3589578,5879385 -> ({})".format(same_frequency(3589578,5879385)))
