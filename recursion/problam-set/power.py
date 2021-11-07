@@ -16,5 +16,3 @@ print(Custom().power(10,-2))
 print(Custom().power(2,0))
 print(Custom().power(2,2))
 print(Custom().power(2,4))
-
-
