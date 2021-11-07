@@ -12,7 +12,9 @@ class Custom:
             return 1
         return base * self.power(base,expoenet-1)
 
-print(Custom().pow(10,-2))
-print(Custom().pow(2,0))
-print(Custom().pow(2,2))
-print(Custom().pow(2,4))
+print(Custom().power(10,-2))
+print(Custom().power(2,0))
+print(Custom().power(2,2))
+print(Custom().power(2,4))
+
+
