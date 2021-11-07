@@ -17,15 +17,13 @@ def min_subarray_len(arr, num):
         if total < num and end < len(arr):
             total = total+arr[end]
             end +=1
-            #print("[{} - {}] {} + {} = {}".format(start,end,total-arr[end],arr[end],total))
         elif total >= num:
             min_len.append(end - start)
             total = total - arr[start]
             start +=1
-            #print("[{} - {}] {} + {} = {}".format(start,end,total-arr[end],arr[end],total))   
         else:
             break
-        #print("[{} - {}] {} + {} = {}".format(start,end,total-arr[end],arr[end],total))
+       
     print(min_len)
 
     return min(min_len)
