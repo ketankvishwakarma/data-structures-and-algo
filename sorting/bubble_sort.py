@@ -17,4 +17,6 @@ def sort(arr):
             break
     return arr
 
-print(sort([1,7,3,4,6,]))
+print(sort([1,7,3,4,6,9]))
+
+print(sort([1]))
