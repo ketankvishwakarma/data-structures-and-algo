@@ -12,7 +12,7 @@ Ratiorg needs statues of sizes 4, 5 and 7.
 """
 
 
-def makeArrayConsecutive2(statues):
+def make_array_consecutive2(statues):
     statues.sort()
     all_sizes = []
     for x in range(statues[0],statues[(len(statues)-1)]+1):
@@ -24,4 +24,4 @@ def makeArrayConsecutive2(statues):
     return missing
     
 
-print(makeArrayConsecutive2([6,2,3,8]))
+print(make_array_consecutive2([6,2,3,8]))
