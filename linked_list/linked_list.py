@@ -48,6 +48,13 @@ class SinglyLinkedList:
             node = node.next
         return node
 
+    def set(self,value,index):
+        returned_value = self.get(index)
+        if returned_value != None:
+            returned_value.data = value
+            return True
+        return False
+
     def insert(self,value,position):
         if position <= 0 or position > self.lenght:
             return None
@@ -88,3 +95,6 @@ s.insert(100,7)
 s.print()
 print(s.get(7))
 print(s.get(1))
+
+s.set(200,7)
+s.print()
