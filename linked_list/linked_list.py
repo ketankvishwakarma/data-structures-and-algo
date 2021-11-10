@@ -104,7 +104,21 @@ class SinglyLinkedList:
             self.head = next_item
         return True
 
+    def reverse(self):
 
+        if self.lenght <=1:
+            return True
+        
+        node = self.head
+        self.head = self.tail
+        self.tail = node
+        pre = None
+        next_node = None
+        for i in range(self.lenght):
+            next_node = node.next
+            node.next = pre
+            pre = node
+            node = next_node 
 
 
 
@@ -114,19 +128,24 @@ class SinglyLinkedList:
 
 s = SinglyLinkedList()
 
-[s.push(i) for i in range(1,11)]
+[s.push(i) for i in range(1,6)]
 
 s.print()
 
-print("removing 0th item {}".format(s.remove(0)))
-s.print()
-print("removing 1th item {}".format(s.remove(1)))
-s.print()
-print("removing 5th item {}".format(s.remove(5)))
-s.print()
-print("removing 6th item {}".format(s.remove(6)))
-s.print()
-print("removing 7th item {}".format(s.remove(7)))
+s.reverse()
 
 s.print()
+
+""" remove """
+#print("removing 0th item {}".format(s.remove(0)))
+#s.print()
+#print("removing 1th item {}".format(s.remove(1)))
+#s.print()
+#print("removing 5th item {}".format(s.remove(5)))
+#s.print()
+#print("removing 6th item {}".format(s.remove(6)))
+#s.print()
+#print("removing 7th item {}".format(s.remove(7)))
+
+
 
