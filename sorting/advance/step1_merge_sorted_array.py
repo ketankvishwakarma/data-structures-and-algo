@@ -21,6 +21,7 @@ def merge_sorted_array(arr1, arr2):
     return sorted_array
 
 
+
 print(merge_sorted_array([1,10,50],[2,19,99]))
 
 print(merge_sorted_array([99,101,150],[2,9,10]))
