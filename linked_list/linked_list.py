@@ -136,16 +136,13 @@ s.reverse()
 
 s.print()
 
-""" remove """
-#print("removing 0th item {}".format(s.remove(0)))
-#s.print()
-#print("removing 1th item {}".format(s.remove(1)))
-#s.print()
-#print("removing 5th item {}".format(s.remove(5)))
-#s.print()
-#print("removing 6th item {}".format(s.remove(6)))
-#s.print()
-#print("removing 7th item {}".format(s.remove(7)))
+print(s.get(3).data)
+print(s.push(6))
+print(s.pop())
+print(s.insert(10,5))
+s.print()
+
+
 
 
 
