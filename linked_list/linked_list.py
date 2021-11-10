@@ -15,18 +15,20 @@ class SinglyLinkedList:
 
     def pop(self):
         if self.head == None:
-            return None
+            return False
         # if only one is there:
         previous = self.head
         current = self.head
         while current.next!=None:
             previous = current
             current = current.next
-        print("poping {} ".format(current.data))
         previous.next = None
         self.tail = previous
         self.lenght-=1
-        return current
+        if self.lenght == 0:
+            self.head = None
+            self.tail = None
+        return True
 
     def push(self,value):
         new_node = Node(value)
@@ -39,6 +41,7 @@ class SinglyLinkedList:
             self.tail.next = new_node
             self.tail = new_node
             self.lenght+=1
+        return True
     
     def get(self,postion):
         if postion <= 0 or postion > self.lenght:
@@ -56,22 +59,51 @@ class SinglyLinkedList:
         return False
 
     def insert(self,value,position):
-        if position <= 0 or position > self.lenght:
-            return None
         if value == None:
-            return None
+            return False
+        if position <= 0 or position > self.lenght:
+            return False
+        if position == self.lenght:
+            self.push(value)
+            return True
+
         pre = self.head
         swap_node = self.head
         current_postion = 1
-        while current_postion<position:
+        while current_postion < position:
             pre = swap_node
             swap_node = swap_node.next
             current_postion+=1
         new_node = Node(value)
-        pre.next = new_node
-        new_node.next = swap_node
+        if position==1:
+            new_node.next = self.head
+            self.head = new_node
+        else:
+            pre.next = new_node
+            new_node.next = swap_node
         self.lenght+=1
+        return True
         
+    def remove(self,position):
+        if position == 0 or position > self.lenght:
+            return False
+        if self.lenght == 1 or position == self.lenght:
+            return self.pop()
+        
+        current = self.head
+        previous = self.head
+        for i in range(1,position):
+            previous = current
+            current = current.next
+
+        next_item = current.next
+        previous.next = next_item
+        current.next = None
+        self.lenght-=1
+        if position == 1:
+            self.head = next_item
+        return True
+
 
 
 
@@ -82,19 +114,19 @@ class SinglyLinkedList:
 
 s = SinglyLinkedList()
 
-[s.push(i) for i in range(10)]
+[s.push(i) for i in range(1,11)]
 
 s.print()
 
-#print(s.get(5))
-#print(s.get(0))
-#print(s.get(1))
-#s.pop()
-#s.print()
-s.insert(100,7)
+print("removing 0th item {}".format(s.remove(0)))
 s.print()
-print(s.get(7))
-print(s.get(1))
+print("removing 1th item {}".format(s.remove(1)))
+s.print()
+print("removing 5th item {}".format(s.remove(5)))
+s.print()
+print("removing 6th item {}".format(s.remove(6)))
+s.print()
+print("removing 7th item {}".format(s.remove(7)))
 
-s.set(200,7)
 s.print()
+
