@@ -37,7 +37,27 @@ class BST:
                     return self
                 else:
                     current = current.right
-                
+    
+    def find(self, value) -> bool:
+        if self.root == None:
+            return False
+        
+        current = self.root
+        while True:
+            if value == current.value: return True
+            if value < current.value:
+                if current.left == None: return False
+                else: current = current.left
+            else:
+                if current.right == None: return False
+                else: current = current.right
+
+
+            
+
+
+
+
     def print_tree(self,node, level=0):
         if node != None:
             self.print_tree(node.right, level + 1)
@@ -53,7 +73,9 @@ s.insert(2)
 s.insert(11)
 s.insert(13)
 s.insert(16)
-
-
-
 s.print_tree(s.root)
+print("search for 10 results in {}".format(s.find(10)))
+print("search for 2 results in {}".format(s.find(2)))
+print("search for 20 results in {}".format(s.find(20)))
+
+
