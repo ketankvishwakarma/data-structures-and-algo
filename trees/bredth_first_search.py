@@ -1,3 +1,4 @@
+
 class Node:
     def __init__(self,value) -> None:
         self.value = value
@@ -55,9 +56,52 @@ class BST:
                 else: current = current.right
 
 
-            
+    def bfs(self) -> list:
+        queue = []
+        visited = []
+        if self.root == None: return visited
+        queue.append(self.root)
+        while len(queue)>0:
+            first = queue.pop(0)
+            visited.append(first.value)
+            if first.left!=None:
+                queue.append(first.left)
+            if first.right!=None:
+                queue.append(first.right) 
+        return visited   
 
+    def treverse_pre(self,node,visited)->list:
+        visited.append(node.value)
+        if node.left !=None: self.treverse_pre(node.left,visited)
+        if node.right !=None: self.treverse_pre(node.right,visited)
+        return visited
 
+    def treverse_post(self,node,visited)->list:
+        if node.left !=None: self.treverse_post(node.left,visited)
+        if node.right !=None: self.treverse_post(node.right,visited)
+        visited.append(node.value)
+        return visited
+
+    def treverse_in(self,node,visited)->list:
+        if node.left !=None: self.treverse_in(node.left,visited)
+        visited.append(node.value)
+        if node.right !=None: self.treverse_in(node.right,visited)
+        return visited
+
+    def dfs_preorder(self)-> list:
+        visited = []
+        if self.root == None: return visited
+        return self.treverse_pre(self.root,visited)
+
+    def dfs_postorder(self)-> list:
+        visited = []
+        if self.root == None: return visited
+        return self.treverse_post(self.root,visited)
+
+    def dfs_inorder(self)-> list:
+        visited = []
+        if self.root == None: return visited
+        return self.treverse_in(self.root,visited)
 
 
     def print_tree(self,node, level=0):
@@ -76,8 +120,9 @@ s.insert(11)
 s.insert(13)
 s.insert(16)
 s.print_tree(s.root)
-print("search for 10 results in {}".format(s.find(10)))
-print("search for 5 results in {}".format(s.find(5)))
-print("search for 20 results in {}".format(s.find(20)))
 
+print("bfs      --> {}".format(s.bfs()))
+print("dfs_pre  --> {}".format(s.dfs_preorder()))
+print("dfs_post --> {}".format(s.dfs_postorder()))
+print("dfs_in   --> {}".format(s.dfs_inorder()))
 
