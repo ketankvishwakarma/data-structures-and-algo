@@ -1,7 +1,8 @@
 """
 INPUT = [1, 2, 3, 4, 5]  shift_by 2 
-outpu = [3, 4, 5, 1, 2]  shift_by 4
-outpu = [5, 1, 2, 3, 4]
+output = [3, 4, 5, 1, 2]  
+INPUT = [1, 2, 3, 4, 5] shift_by 4
+output = [5, 1, 2, 3, 4]
 """
 
 
