@@ -1,4 +1,6 @@
 """
+Left Shift
+
 INPUT = [1, 2, 3, 4, 5]  shift_by 2 
 output = [3, 4, 5, 1, 2]  
 INPUT = [1, 2, 3, 4, 5] shift_by 4
@@ -16,4 +18,12 @@ def left_rotation(a,d):
 left_rotation([1,2,3,4,5],1)
 
 print("-------------------")
-left_rotation([1,2,3,4,5],4)
+left_rotation([1,2,3,4,5],9)
+
+
+[1, 2, 3, 4, 5]
+
+[1, 2, 3, 4, 5]
+
+[2, 3, 4, 5, 1]
+[3, 4, 5, 1, 2]

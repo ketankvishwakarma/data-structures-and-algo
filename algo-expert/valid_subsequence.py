@@ -1,3 +1,15 @@
+"""
+  Given two non-empty arrays of integers, write a function that determines
+  whether the second array is a subsequence of the first one.
+
+  A subsequence of an array is a set of numbers that aren't necessarily adjacent
+  in the array but that are in the same order as they appear in the array. For
+  instance, the numbers [1, 3, 4] forms a subsequence of array [1, 2, 3, 4]
+  whereas, [1, 4, 3] is not
+
+"""
+
+
 def is_valid_subsequence(array, sequence):
     match_left = len(sequence)
     start = sequence[len(sequence)-match_left]
