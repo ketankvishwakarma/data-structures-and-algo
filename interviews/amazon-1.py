@@ -22,7 +22,7 @@ Input: temperatures = [30,60,90] Output: [1,1,0]
 """
 
 def daily_temperatures(temps):
-          output = [-1] * len(temps)
+          output = [0] * len(temps)
           stack =[]
           for idx, current_temp in enumerate(temps):
                while len(stack) > 0 and  current_temp > temps[stack[-1]]:
