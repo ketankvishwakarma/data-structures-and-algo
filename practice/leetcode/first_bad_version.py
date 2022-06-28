@@ -28,23 +28,20 @@ import random
 class Solution:
     def firstBadVersion(self, n: int) -> int:
         nums = list(range(1,n+1))
-        print(nums)
-        bad = random.choice(nums)
         start = 0
         end = len(nums)
         while start<=end:
             mid = int((start+end)/2)
             isBadVersion(nums[mid])
             if isBadVersion(nums[mid]):
-                
                 return mid
-            elif target > nums[mid]:
+            elif n > nums[mid]:
                 start=mid+1
             else:
-                end=mid-1
+                end=mid
         return -1
 
 
 if __name__ =="__main__":
     s = Solution()
-    s.firstBadVersion(10)
+    s.firstBadVersion(1)

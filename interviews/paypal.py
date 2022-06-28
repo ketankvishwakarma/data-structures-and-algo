@@ -3,7 +3,7 @@ Title: Parade in Hakerland
 
 Input : 001011
 
-Whenever the is a 01 replace with with 10 and repete it till there is not combination exist.
+Whenever the is a 01 replace it with 10 and repete it till there is not combination exist.
 
 t0 = 00 10 11
 t1 = 01 01 01  --Pass 1
@@ -32,8 +32,9 @@ def parade(color):
         if x == '1':
             count = count +1
     return count
+    
 
 
 
 if __name__=="__main__":
-    print(parade("0101"));
+    print(parade("001011"));
