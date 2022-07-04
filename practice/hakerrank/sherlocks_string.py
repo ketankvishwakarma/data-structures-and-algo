@@ -2,9 +2,6 @@
 https://www.hackerrank.com/challenges/sherlock-and-valid-string/problem
 """
 
-from pickle import TRUE
-
-
 def isValid(s):
     char_count = {}
     for x in s:
