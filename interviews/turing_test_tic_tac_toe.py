@@ -1,5 +1,3 @@
-from pyexpat import XML_PARAM_ENTITY_PARSING_ALWAYS
-
 
 moves = ["X","O"]
 blank = ['_']
